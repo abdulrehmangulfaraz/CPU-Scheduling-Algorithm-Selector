@@ -37,6 +37,16 @@ int main() {
     reset_metrics(test_procs, n);
     calculate_priority(test_procs, n);
 
+    test_procs[0].priority = 1; // P1
+    test_procs[1].priority = 2; // P2 (User - Low Priority)
+    test_procs[2].priority = 1; // P3
+
+    reset_metrics(test_procs, n);
+    calculate_mlq(test_procs, n);
+
+    reset_metrics(test_procs, n);
+    calculate_mlfq(test_procs, n);
+
     // Run Round Robin
     int quantums[] = {2, 4}; // Reduced to 2 examples for brevity
     for (int i = 0; i < 2; i++) {
