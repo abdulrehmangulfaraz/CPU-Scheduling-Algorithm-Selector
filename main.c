@@ -30,6 +30,11 @@ int main() {
     reset_metrics(test_procs, n); 
     calculate_fcfs(test_procs, n);
     calculate_sjf(test_procs, n);
+    int quantums[] = {2, 4, 8};
+    for (int i = 0; i < 3; i++) {
+        reset_metrics(test_procs, n);
+        calculate_rr(test_procs, n, quantums[i]);
+    }
 
     return 0;
 }
