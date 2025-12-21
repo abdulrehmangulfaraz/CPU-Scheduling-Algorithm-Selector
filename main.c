@@ -29,6 +29,7 @@ int main() {
     // Run FCFS
     reset_metrics(test_procs, n); 
     calculate_fcfs(test_procs, n);
+    calculate_sjf(test_procs, n);
 
     return 0;
 }
