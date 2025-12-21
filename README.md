@@ -1,19 +1,18 @@
 # CPU Scheduling Algorithm Selector
 
-## Project Description
-This project implements a CPU Scheduling Algorithm Selector in C. It analyzes workload characteristics and identifies the most suitable scheduling algorithm based on performance metrics like Turnaround Time and Waiting Time.
+## Project Overview
+This tool simulates various CPU scheduling algorithms (FCFS, SJF, RR, Priority, MLQ, MLFQ) to determine the optimal strategy for a given set of processes.
 
-## Course Information
-* **Course:** CSC300 Operating Systems
-* **Assignment:** Complex Computing Problem (CCP)
+## Analysis & Decision Criteria
+The "Selector" determines the best algorithm based on **Average Waiting Time**, as this is the primary metric for system efficiency.
 
-## Supported Algorithms
-1.  First Come First Serve (FCFS)
-2.  Shortest Job First (SJF)
-3.  Round Robin (RR) with variable Time Quantum
-4.  Priority Scheduling
-5.  Multi-level Queue (MLQ)
-6.  Multi-level Feedback Queue (MLFQ)
+### Trade-off Observations
+1.  **FCFS:** Performs well for uniform batch jobs but suffers from the "Convoy Effect" if a long CPU-bound process arrives first.
+2.  **SJF (Shortest Job First):** Consistently provides the mathematically minimum average waiting time. However, it requires knowing the burst time in advance, which is not always possible in real systems.
+3.  **Round Robin:** The best choice for **Fairness** and **Response Time**. It prevents starvation but often has a higher average Turnaround Time compared to SJF.
+4.  **MLFQ:** The most robust for general-purpose operating systems. It dynamically penalizes CPU-heavy processes and prioritizes I/O-bound (interactive) processes without needing to know burst times beforehand.
 
-## Build Instructions
-(To be added: Makefile instructions)
+## Complexity Assessment
+This project addresses the **Complex Computing Problem (CCP)** attributes:
+* **Depth of Analysis:** Solved the trade-off between fairness (RR) and efficiency (SJF) by implementing MLFQ.
+* **Modular Design:** Separated logic into `algorithms/` modules and a core `scheduler.h` interface.
