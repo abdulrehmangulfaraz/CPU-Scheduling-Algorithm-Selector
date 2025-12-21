@@ -5,13 +5,15 @@
 #include <stdlib.h>
 
 typedef struct {
-    int pid;
-    int arrival_time;
-    int burst_time;
-    int priority;
+    // --- INPUTS ---
+    int pid;            // Identification
+    int arrival_time;   // Scheduling order realism
+    int burst_time;     // Core scheduling metric
+    int priority;       // Priority-based decisions
+    int queue_id;       // Initial Queue ID (For MLQ)
     
-    // Execution metrics
-    int remaining_time;
+    // --- OUTPUTS / TRACKING ---
+    int remaining_time; // Execution tracking
     int waiting_time;
     int turnaround_time;
     int completion_time;
