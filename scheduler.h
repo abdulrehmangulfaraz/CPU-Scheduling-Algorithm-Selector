@@ -4,29 +4,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Represents a single process
 typedef struct {
-    int pid;            // Process ID
-    int arrival_time;   // Arrival Time
-    int burst_time;     // CPU Burst Time
-    int priority;       // Priority (lower value might indicate higher priority, we'll define this later)
+    int pid;
+    int arrival_time;
+    int burst_time;
+    int priority;
     
     // Execution metrics
-    int remaining_time; // For preemptive algorithms (like RR)
+    int remaining_time;
     int waiting_time;
     int turnaround_time;
     int completion_time;
-    int start_time;     // Useful for analysis
+    int start_time;
 } Process;
 
-// Function Prototypes for the Algorithms (to be implemented later)
+// Function Prototypes
 void calculate_fcfs(Process p[], int n);
 void calculate_sjf(Process p[], int n);
 void calculate_priority(Process p[], int n);
 void calculate_rr(Process p[], int n, int quantum);
+void calculate_mlq(Process p[], int n);
+void calculate_mlfq(Process p[], int n);
 
-// Helper function to reset metrics between algorithms
-// This is crucial because we will run different algorithms on the SAME dataset
 void reset_metrics(Process p[], int n);
 
 #endif
