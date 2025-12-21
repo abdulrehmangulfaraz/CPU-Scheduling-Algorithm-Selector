@@ -6,7 +6,7 @@ CFLAGS = -Wall -g
 TARGET = scheduler
 
 # Source Files (We will add the algorithm .c files here as we create them)
-SRCS = main.c
+SRCS = main.c fcfs.c
 
 # Object Files (generated automatically from SRCS)
 OBJS = $(SRCS:.c=.o)
