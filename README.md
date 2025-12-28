@@ -1,4 +1,4 @@
-# CPU Scheduling Algorithm Selector (v3.0)
+# CPU Scheduling Algorithm Selector
 
 ## Project Overview
 The **CPU Scheduling Algorithm Selector** is a C-based simulation and analysis tool developed to evaluate, compare, and recommend CPU scheduling algorithms based on process behavior and workload characteristics.
