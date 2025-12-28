@@ -212,7 +212,7 @@ int main() {
 
     while(1) {
         printf("\n=============================================\n");
-        printf("   CPU SCHEDULING ALGORITHM SELECTOR (v3.0)  \n");
+        printf("   CPU SCHEDULING ALGORITHM SELECTOR \n");
         printf("=============================================\n");
         printf("1. Run a Test Scenario (1-10)\n");
         printf("2. Custom Input\n");
