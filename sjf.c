@@ -2,7 +2,7 @@
 #include <limits.h> // For INT_MAX
 
 void calculate_sjf(Process p[], int n) {
-    printf("\n--- Executing SJF (Non-Preemptive) ---\n");
+    printf("\n--- Executing SJF ---\n");
 
     int current_time = 0;
     int completed = 0;

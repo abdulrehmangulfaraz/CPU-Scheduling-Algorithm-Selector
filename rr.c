@@ -21,9 +21,6 @@ bool is_empty() {
 }
 
 // Function to check if a process is already in queue (to avoid duplicates)
-// Note: In a robust implementation, we track this via flags, 
-// but for this simulation, strict state management is enough.
-// We'll manage 'in_queue' logic inside the main loop.
 
 void calculate_rr(Process p[], int n, int quantum) {
     printf("\n--- Executing Round Robin (Quantum: %d) ---\n", quantum);
@@ -33,16 +30,12 @@ void calculate_rr(Process p[], int n, int quantum) {
     rear = -1;
     
     // Status array to track if a process is currently in the queue
-    int in_queue[100] = {0}; // 0 = false, 1 = true
+    int in_queue[100] = {0}; 
     
     // Reset internal state
     int current_time = 0;
     int completed = 0;
-    
-    // Enqueue the first process(es) that arrive at time 0
-    // Sort first? Standard RR assumes arrival order, but our array might be unsorted.
-    // Ideally, we check all processes.
-    
+        
     // Initial loading of queue
     for(int i=0; i<n; i++) {
         // If it arrives at 0, add it

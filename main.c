@@ -98,7 +98,7 @@ void calculate_all_stats(Process p_orig[], int n) {
     for(int i=0; i<n; i++) p[i] = p_orig[i];
     reset_metrics(p, n);
     calculate_sjf(p, n);
-    save_result("SJF (Non-Preemptive)", p, n);
+    save_result("SJF", p, n);
 
     // 3. Priority
     for(int i=0; i<n; i++) p[i] = p_orig[i];
@@ -258,7 +258,7 @@ int main() {
         while(1) {
             printf("\n-------------------------------------------------------------\n");
             printf("[ DRILL DOWN MENU ] View detailed execution logs:\n");
-            printf("1. FCFS                     2. SJF (Non-Preemptive)\n");
+            printf("1. FCFS                     2. SJF\n");
             printf("3. Priority                 4. Multi-Level Queue (MLQ)\n");
             printf("5. Multi-Level Feedback     6. Round Robin (RR)\n");
             printf("0. << Back to Main Menu\n");

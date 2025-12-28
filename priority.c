@@ -2,7 +2,7 @@
 #include <limits.h>
 
 void calculate_priority(Process p[], int n) {
-    printf("\n--- Executing Priority Scheduling (Non-Preemptive) ---\n");
+    printf("\n--- Executing Priority Scheduling ---\n");
     printf("Note: Lower value = Higher Priority\n");
 
     int current_time = 0;
